@@ -124,7 +124,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     color: #717171;
     margin-bottom: 42px;
 }
-.main-block__title_green {
+.green {
 color: #499A18;
 }
 .main-block__text {
@@ -137,8 +137,51 @@ color: #499A18;
     border-radius: 10px;
     width: 158px;
     height: 44px;
-    padding: 13px 27px 14px;
 }
 .main-block__button-link {
     color: #000000;
+    padding: 13px 27px 14px;
+}
+.main-block__button-link:hover {
+    color: white;
+    transition: 0.3s;
+}
+.main-block__button:hover {
+    background-color:  #E06733;
+    transition: 0.3s;
+}
+/*-----------------------about us------------*/
+.page__description {
+}
+.description {
+}
+.description__container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.container {
+}
+.description__body {
+    display: flex;
+    flex-direction: column;
+    padding-top: 161px;
+    margin-right: 153px;
+}
+.description__subtitle {
+    margin-bottom: 40px;
+}
+.subtitle {
+    font-size: 40px;
+    line-height: 52px;
+    color: #E06733;
+
+}
+.description__text {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 155px;
+}
+.descrition__image {
+    padding-top: 93px;
 }
