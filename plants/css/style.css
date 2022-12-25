@@ -209,22 +209,23 @@ color: #499A18;
 }
 .services__subtitle_green {
 }
-.services__buttoms {
+.services__buttons {
     display: flex;
     justify-content: flex-start;
     margin-top: 69px;
 }
-.services__buttom:not(:last-child) {
+.services__button:not(:last-child) {
     margin-right: 38px;
 }
-.services__buttom {
+.button {
     border: 1px solid #E06733;
     border-radius: 5px;
     width: 161px;
     height: 50px;
     font-family: 'Inika', serif;
+    background-color: inherit;
 }
-.services__link {
+.link {
     font-size: 20px;
     line-height: 26px;
     color: #E06733;
@@ -263,4 +264,92 @@ color: #499A18;
 .project__text {
     color: #717171;
     margin-bottom: 36px;
+}
+/*------------------------prices-------------------------*/
+.page__prices {
+}
+.prices {
+}
+.prices__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.prices__choice-block {
+   }
+.block-choice {
+}
+.block-choice__subtitle {
+    margin-bottom: 60px;
+}
+.block-choice__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid #E3E1D5;
+    border-radius: 20px;
+    width: 332px;
+    height: 282px;
+    margin-bottom: 129px;
+    align-items: center;
+    
+}
+.block-choice__button {
+    background: #EDF2EC;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    height: 50px;
+    padding: 0 40px 0 40px;
+}
+.block-choice__name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+}
+.block-choice__icon {
+    width: 16px;
+    height: 16px;
+    background: #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+}
+.block-choice__icon img {
+    width: 6px;
+    height: 4px;
+}
+.prices__help-block {
+    text-align: right;
+}
+.block-help {
+}
+.block-help__subtitle {
+    max-width: 453px;
+    margin-bottom: 38px;
+}
+.block-help__subtitle_green {
+}
+.prices-subtitle {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+}
+.block-help__button {
+    margin-bottom: 39px;
+}
+.button {
+}
+.block-help__link {
+}
+.link {
+}
+.block-help__image img {
+    width: 152px;
+    height: 175px;
 }
