@@ -411,3 +411,45 @@ color: #499A18;
     width: 6px;
     height: 4px;
 }
+/*----------------footer-----------------*/
+.footer {
+    color: #000000;
+    padding: 40px 0 40px 0;
+    font-size: 20px;
+    line-height: 50px;
+}
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.data {
+}
+.data__copyright {
+    margin-right: 20px;
+}
+.data__year {
+    margin-right: 20px;
+}
+.data__gh-link {
+        color: inherit;
+}
+.footer__school-link {
+    color: inherit;
+}
+.footer__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 188px;
+}
+.list {
+}
+.list__item {
+}
+.list__link {
+}
