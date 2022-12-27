@@ -141,21 +141,15 @@
                     <div class="prices__choice-block block-choice">
                         <h2 class="block-choice__subtitle prices-subtitle">Prices</h2>
                         <div class="block-choice__buttons">
-                            <button class="block-choice__button">
-                                <p class="block-choice__name">Basics</p>
-                                <div class="block-choice__icon">
-                                    <img src=".//assets/arrow.svg" alt="arrow">
-                                </div>
-                            </button>
-                            <button class="block-choice__button">
-                                <p class="block-choice__name">Standard</p>
-                                <div class="block-choice__icon">
-                                    <img src=".//assets/arrow.svg" alt="arrow">
-                                </div></button>
-                            <button class="block-choice__button"><p class="block-choice__name">Pro care</p>
-                                <div class="block-choice__icon">
-                                    <img src=".//assets/arrow.svg" alt="arrow">
-                                </div></button>
+                            <select class="block-choice__button" name="price" id="price">
+                                <option class="block-choice__name" hidden>Basics</option>
+                            </select>
+                            <select class="block-choice__button">
+                                <option class="block-choice__name" hidden>Standard</option>
+                            </select>
+                            <select class="block-choice__button">
+                                <option class="block-choice__name" hidden>Pro care</option>
+                            </select>
                         </div>
                     </div>
                     <div class="prices__help-block block-help">
@@ -175,11 +169,9 @@
                         <img src="./assets/contact_woman1.png" alt="contact_woman">
                     </div>
                     <h2 class="contacts__subtitle subtitle"><span class="contacts__subtitle_green green">Contact us</span></h2>
-                    <button class="contacts__button"><p class="contacts__name-button">City</p>
-                        <div class="contacts__arrow-body">
-                            <div class="contacts__arrow"></div>
-                        </div>
-                    </button>
+                    <select class="contacts__select" name="city" id="city">
+                        <option class="contacts__name-select" hidden>City</option>
+                    </select>
                 </div>
             </section>
         </main>

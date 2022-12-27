@@ -274,33 +274,19 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     align-items: center;
 }
 .block-choice__button {
-    background: #EDF2EC;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 250px;
     height: 50px;
-    padding: 0px 40px 0 40px;
-}
-.block-choice__name {
+    padding: 2px 0px 0 40px;
     font-weight: 700;
     font-size: 20px;
-    padding-top: 2px;
     color: #000000;
+    appearance: none;
+    background: #EDF2EC url(../assets/accordion_btnprice.svg) center right 40px no-repeat;
 }
-.block-choice__icon {
-    width: 16px;
-    height: 16px;
-    background: #D9D9D9;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items:  center;
-}
-.block-choice__icon img {
-    width: 6px;
-    height: 4px;
+.block-choice__button:active {
+    background: #D6E7D2 url(../assets/accordion_btnprice_open.svg) center right 40px no-repeat;
+    transition: 0.3s;
 }
 .prices__help-block {
     text-align: right;
@@ -350,48 +336,27 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 .contacts__subtitle_green {
     letter-spacing: 0;
 }
-.contacts__button {
-    background: #D6E7D2;
+.contacts__select {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 0px;
     width: 452px;
     height: 50px;
     margin-top: 148px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 34px 0 20px;
-}
-.contacts__button:active{
-    box-shadow: none;
-    background-color: #C1E698;
-    transition: 0.3s;
-}
-.contacts__button:active .contacts__arrow-body {
-    background-color: #8BA07E;
-}
-.contacts__button:active .contacts__arrow {
-    background: url(../assets/arrowcontactdown.svg);
-}
-.contacts__name-button {
     font-size: 20px;
     line-height: 40px;
     letter-spacing: 0.05em;
     color: #717171;
+    appearance: none;
+    background: #D6E7D2 url(../assets/accordion_btnun.svg) center right 35px no-repeat;
 }
-.contacts__arrow-body {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background-color: #AEA1A1;
-    display: flex;
-    justify-content: center;
-    align-items:  center;
+.contacts__name-select {
 }
-.contacts__arrow {
-    width: 6px;
-    height: 4px;
-    background: url(../assets/arrowcontact.svg);
+.contacts__select:active{
+    padding-left: 35px;
+    box-shadow: none;
+    transition: 0.3s;
+    background: #C1E698 url(../assets/drop_btn.svg) center right 35px no-repeat;
 }
 /*----------------footer-----------------*/
 .footer {
@@ -422,6 +387,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 .footer__school-link {
     color: inherit;
+    margin-left: -2px;
 }
 .data__gh-link:hover, .footer__school-link:hover {
     color: #E06733;
