@@ -59,7 +59,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 .header__logo {
     display: flex;
     justify-content: flex-start;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 .header__logo-image {
     height: 24px;
@@ -88,6 +88,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 .menu__link:hover {
     color: #E06733;
     font-weight: 700;
+    transition: .3s;
   }
 /*------------------------block welcome--------------------*/ 
 .main-block {
@@ -169,7 +170,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 153px;
-    text-align: left;
+    text-align: start;
+    max-width: 598px;
 }
 .descrition__image {
     padding-top: 93px;
@@ -391,6 +393,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 .data__gh-link:hover, .footer__school-link:hover {
     color: #E06733;
+    transition: 0.3s;
 }
 .footer__list {
     display: flex;
