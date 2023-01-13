@@ -12,7 +12,15 @@ const body = document.body;
     hamb.classList.toggle("active");
     body.classList.toggle("noscroll");
     renderPopup();
+    
  }
  function renderPopup() {
     popup.appendChild(menu);
  }
+ menu.addEventListener("click", myFunc);
+ function myFunc(e) {
+   popup.classList.toggle("open")
+   body.classList.toggle("noscroll");
+   hamb.classList.toggle("active");
+ }
+ 

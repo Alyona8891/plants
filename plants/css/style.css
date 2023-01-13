@@ -71,7 +71,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         width: 40px;
         height: 2px;
         background-color: #717171;
-        transition: 0.2s;
+        transition: 0.1s;
     }
     .header__bar:not(:last-child) {
         margin: 6.5px auto;
@@ -108,7 +108,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         background-color: #FFFFFF;
         z-index: 100;
         display: flex;
-        transition: 0.3s;
+        transition: 0.2s;
     }
     .popup.open {
         right: 0;
@@ -148,7 +148,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 @media (max-width: 380px) {
     .header {
-        position: fixed;
+        /*position: fixed;*/
         left: 0px;
         top: 0px;
         width: 100%;
@@ -229,6 +229,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 .main-block {
     padding: 48px 0 55px 0;
     background-color: #EDF2EC;
+    
 }
 @media (max-width: 768px) {
     .main-block {
@@ -237,8 +238,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 @media (max-width: 380px) {
     .main-block {
-        padding: 20px 0 23px 0;
-        margin-top: 96px;
+        padding: 21px 0 24px 0;
+        
     }
 }
 .main-block__container {
@@ -246,8 +247,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     justify-content: space-between;
 }
 .main-block__image {
-    width: 461px;
-    height: 424px;
+    /*width: 461px;
+    height: 424px;*/
     margin-left: -9px;
 }
 @media (max-width: 768px) {
@@ -262,6 +263,9 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     .main-block__image {
         display: none;
     } 
+    .main-block__image img {
+        display: none; 
+    }
 }
 .main-block__image img {
     display: inline-block;
@@ -281,38 +285,40 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         max-width: 346px;
     }   
 }
+@media (max-width: 380px) {
+    .main-block__body {
+        max-width: 330px;
+    }   
+}
 .main-block__title {
     font-weight: 700;
     font-size: 45px;
     line-height: 50px;
     color: #717171;
     margin-bottom: 44px;
-    word-spacing: -2px;    
 }
 @media (max-width: 768px) {
     .main-block__title {
         font-size: 35px;
         margin-bottom: 32px;
-        word-spacing: 1px;
     }
 }
 @media (max-width: 380px) {
     .main-block__title {
         font-size: 25px;
         line-height: 35px;
-        word-spacing: -1px;
         margin-bottom: 20px;
+        letter-spacing: -0.1px;
     }
 }
 .green {
     color: #499A18;
-    letter-spacing: 0.2px;
+    /*letter-spacing: 0.2px;*/
 }
 .main-block__text {
     font-size: 20px;
     line-height: 35px;
     margin-bottom: 47px;
-    letter-spacing: -0.1px;
     max-width: 540px;
 }
 @media (max-width: 768px) {
@@ -323,15 +329,14 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         margin-bottom: 34px;
         max-width: 325px;
         text-align: left;
-        letter-spacing: 0.3px;
+        letter-spacing: 0px;
     } 
 }
 @media (max-width: 380px) {
     .main-block__text {
         margin-left: 0px;
         margin-bottom: 26px;
-        max-width: 314px;
-        letter-spacing: 0.2px;
+        max-width: 330px;
     } 
 }
 .main-block__button {
@@ -392,6 +397,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 .description__subtitle {
     margin-bottom: 38px;
+    max-width: 423px
 }
 @media (max-width: 768px) {
     .description__subtitle {
@@ -402,7 +408,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 @media (max-width: 380px) {
     .description__subtitle {
         margin-bottom: 13px;
-        max-width: 100%px;
+        max-width: 100%;
     }
 }
 .subtitle {
@@ -437,23 +443,23 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     margin-bottom: 153px;
     text-align: start;
     max-width: 598px;
-    letter-spacing: -0.09px;
 }
 @media (max-width: 768px) {
     .description__text {
         text-align: left;
         max-width: 655px;
         margin-bottom: 68px;
-        letter-spacing: -0.1px;
+        word-spacing: -0.5px;
     }
 }
 @media (max-width: 380px) {
     .description__text {
         font-size: 15px;
         line-height: 25px;
-        max-width: 328px;
+        max-width: 330px;
         margin-bottom: 0px;
-        letter-spacing: 0.144px;
+        word-spacing: 0px;
+        letter-spacing: 0px;
     }
 }
 .descrition__image {
@@ -484,7 +490,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     .descrition__image {
         width: 150px;
         height: 155px;
-        margin-bottom: 27px;
+        margin-bottom: 26px;
     }
     .descrition__image img {
         width: 100%;
@@ -535,10 +541,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         margin: 30px 0 0 0;
         max-width: 187px;
     } 
-}
-
-.services__subtitle_green {
-    letter-spacing: 0;
 }
 .services__buttons {
     display: flex;
@@ -693,7 +695,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 @media (max-width: 768px) {
     .project__text {
-        max-width: 201px;
+        max-width: 205px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -815,12 +817,12 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     font-size: 40px;
     line-height: 50px;
     color: #000000;
+    letter-spacing: 0.35px;
 }
 @media (max-width: 768px) {
     .prices-subtitle {
         font-size: 35px;
         line-height: 42.36px;
-        letter-spacing: 0.35px;
         margin-left: 15px;
     }
 }
@@ -865,6 +867,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         display: block;
         margin-left: auto;
         margin-right: auto;
+        word-spacing: 0px;
     }
     .block-help__subtitle_green {
         letter-spacing: -0.3px;
@@ -1044,7 +1047,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 @media (max-width: 380px) {
     .footer {
-        padding: 18px 0 3px 0;
+        padding: 19px 0 3px 0;
         line-height: 30px;
     }
 }
@@ -1078,12 +1081,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 @media (max-width: 768px) {
     .data__year {
-        margin-right: 28px;
-    } 
-}
-@media (max-width: 380px) {
-    .data__year {
-        margin-right: 26px;
+        margin-right: 22px;
     } 
 }
 .data__gh-link {
@@ -1105,9 +1103,9 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 @media (max-width: 380px) {
     .footer__school-link {
         margin-left: 0px;
-        width: 500px;
+        width: 330px;
         text-align: center;
-        margin: 0 auto 12px;
+        margin: 0 auto 11px;
     }
 }
 .data__gh-link:hover, .footer__school-link:hover {
