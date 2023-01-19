@@ -922,7 +922,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     }
 }
 .block-help__subtitle {
-    max-width: 458px;
+    max-width: 500px;
     margin-bottom: 40px;
     padding-top: 1px;
     letter-spacing: 0.2px;
