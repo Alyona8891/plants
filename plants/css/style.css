@@ -233,7 +233,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
   }
 /*------------------------block welcome--------------------*/ 
 .main-block {
-    padding: 48px 0 55px 0;
+    padding: 48px 0 56px 0;
     background-color: #EDF2EC;
     
 }
@@ -315,7 +315,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     line-height: 50px;
     color: #717171;
     margin-bottom: 44px;
-    letter-spacing: -0.2px;
+    /*letter-spacing: -0.2px;*/
 }
 @media (max-width: 768px) {
     .main-block__title {
@@ -918,8 +918,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         width: 100%;
         display: flex;
         justify-content: center;
-        flex: none
-       text-align: none;
+        flex: none;
     }
 }
 .block-help__subtitle {
