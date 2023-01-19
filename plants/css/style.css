@@ -315,7 +315,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     line-height: 50px;
     color: #717171;
     margin-bottom: 44px;
-    /*letter-spacing: -0.2px;*/
 }
 @media (max-width: 768px) {
     .main-block__title {
@@ -356,7 +355,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         margin-bottom: 34px;
         max-width: 325px;
         text-align: left;
-        letter-spacing: 0.25px;
     } 
 }
 @media (max-width: 600px) {
@@ -488,7 +486,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         text-align: left;
         max-width: 655px;
         margin-bottom: 68px;
-        word-spacing: -0.5px;
         letter-spacing: 0px;
     }
 }
@@ -498,8 +495,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         line-height: 25px;
         max-width: 330px;
         margin-bottom: 0px;
-        word-spacing: -0.5px;
-        letter-spacing: 0.22px;
     }
 }
 .descrition__image {
@@ -1027,8 +1022,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 @media (max-width: 380px) {
     .contacts__image {
-        margin-top: 0px;
-        margin-right: 0px;
         width: 105px;
         height: 124px;
         position: relative;
@@ -1132,7 +1125,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 @media (max-width: 380px) {
     .footer {
         padding: 19px 0 3px 0;
-        line-height: 30px;
     }
 }
 .footer__container {
@@ -1186,9 +1178,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 @media (max-width: 380px) {
     .footer__school-link {
-        margin-left: 0px;
         width: 330px;
-        text-align: center;
         margin: 0 auto 11px;
     }
 }
@@ -1210,7 +1200,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 @media (max-width: 380px) {
     .footer__list {
-        text-align: center;
         margin: 0 auto 16px;
     } 
 }
