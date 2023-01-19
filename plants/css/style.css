@@ -434,7 +434,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     }
 }
 .description__subtitle {
-    margin-bottom: 38px;
+    margin-bottom: 37px;
     max-width: 423px
 }
 @media (max-width: 768px) {
@@ -925,7 +925,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     max-width: 458px;
     margin-bottom: 40px;
     padding-top: 1px;
-    letter-spacing: -0.1px;
+    letter-spacing: 0.2px;
 }
 @media (max-width: 768px) {
     .block-help__subtitle {
