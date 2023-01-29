@@ -3,9 +3,12 @@ const hamb = document.querySelector("#hamb");
 const popup = document.querySelector("#popup");
 const menu = document.querySelector("#menu").cloneNode(1);
 const body = document.body;
+const price = document.querySelectorAll(".block-choice__button");
+const line = document.querySelectorAll(".block-choice__line");
+const order = document.querySelectorAll(".block-choice__btn");
 
- hamb.addEventListener("click", hambHandler);
- function hambHandler(e) {
+hamb.addEventListener("click", hambHandler);
+function hambHandler(e) {
     e.preventDefault();
     e.stopPropagation();
     popup.classList.toggle("open");
@@ -30,3 +33,15 @@ document.onclick = function (e) {
       body.classList.remove("noscroll");
    }
 }
+price.forEach(function (el, i) {
+   el.addEventListener("click", function () {
+       price.forEach ((el, index) => (index !== i) ? el.classList.remove("block-choice__button_open") : '');
+       el.classList.toggle("block-choice__button_open");
+       line.forEach((el, i) => (price[i].classList.contains("block-choice__button_open")) ? el.classList.add("block-choice__line_open") : el.classList.remove("block-choice__line_open"));
+   })
+})
+order.forEach(function (el, i) {
+   el.addEventListener("click", function (event) {
+       event.stopPropagation();
+   })
+})
