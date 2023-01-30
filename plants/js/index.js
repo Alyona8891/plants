@@ -6,6 +6,15 @@ const body = document.body;
 const price = document.querySelectorAll(".block-choice__button");
 const line = document.querySelectorAll(".block-choice__line");
 const order = document.querySelectorAll(".block-choice__btn");
+const garden = document.querySelectorAll(".garden");
+const planting = document.querySelectorAll(".planting");
+const lawn = document.querySelectorAll(".lawn");
+const gardenBtn = document.querySelector("#garden");
+const plantingBtn = document.querySelector("#planting");
+const lawnBtn = document.querySelector("#lawn");
+const buttons = document.querySelectorAll(".services__button");
+const figures = document.querySelectorAll(".services__project-block");
+const forms = document.querySelectorAll(".form");
 
 hamb.addEventListener("click", hambHandler);
 function hambHandler(e) {
@@ -44,4 +53,46 @@ order.forEach(function (el, i) {
    el.addEventListener("click", function (event) {
        event.stopPropagation();
    })
+})
+forms.forEach(function (el) {
+   el.addEventListener("click", function (e) {
+     e.preventDefault();
+     e.stopPropagation();
+   })
+})
+buttons.forEach(function (el, index) {
+   
+   el.addEventListener("click", function () {
+       let num = 1;
+       for(i=0; i<3; i++) {
+           if(buttons[i].classList.contains("button__active")) {
+               num += 1;
+           }
+       } 
+       if(el.classList.contains("button__active")) {
+           el.classList.remove("button__active");   
+       } else {
+           
+           
+           if(num < 3) {
+               el.classList.add("button__active");
+           }
+           figures.forEach((el) => el.classList.add("blur"));
+       }
+       if (gardenBtn.classList.contains("button__active")) {
+           garden.forEach((el) => el.classList.remove("blur"));
+       } else { garden.forEach((el) => el.classList.add("blur"));}
+       if (plantingBtn.classList.contains("button__active")) {
+           planting.forEach((el) => el.classList.remove("blur"));
+       } else { planting.forEach((el) => el.classList.add("blur"));}
+       if (lawnBtn.classList.contains("button__active")) {
+           lawn.forEach((el) => el.classList.remove("blur"));
+       } else { lawn.forEach((el) => el.classList.add("blur"));}
+       if (!gardenBtn.classList.contains("button__active") && !plantingBtn.classList.contains("button__active") && !lawnBtn.classList.contains("button__active")) {
+           figures.forEach((el) => el.classList.remove("blur"));
+       }
+       
+       })
+       
+       
 })

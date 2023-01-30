@@ -648,7 +648,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         letter-spacing: 0.15px;
     } 
 }
-.button:active,.button:hover {
+.button__active {
     background-color: #E06733;
     color: #FFFFFF;
     transition: 0.3s;
@@ -776,6 +776,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 @media (max-width: 380px) {
     .project__text {
         margin-bottom: 19px;
+        transition: 0.3s;
     }
     .services__project-blocks figure:nth-child(2n) > figcaption > p {
         margin-bottom: 17px;
@@ -783,6 +784,10 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     .services__project-blocks figure:nth-child(3) > figcaption > p {
         margin-bottom: 21px;
     }
+}
+.blur {
+    filter: blur(2px);
+    transition: .3s;
 }
 /*------------------------prices-------------------------*/
 .prices__container {
@@ -850,30 +855,6 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         padding: 29px 0px;
     }
 }
-/*.block-choice__button {
-    border-radius: 20px;
-    width: 250px;
-    height: 50px;
-    padding: 2px 0px 0 40px;
-    font-weight: 700;
-    font-size: 20px;
-    color: #000000;
-    appearance: none;
-    background: #EDF2EC url(../assets/accordion_btnprice.svg) center right 40px no-repeat;
-}
-@media (max-width: 380px) {
-    .block-choice__button {
-        width: 180px;
-        padding: 2px 0 0 30px;
-        font-size: 15px;
-        line-height: 20px;
-        background: #EDF2EC url(../assets/accordion_btnprice.svg) center right 40px no-repeat;
-    }
-}
-.block-choice__button:active {
-    background: #D6E7D2 url(../assets/accordion_btnprice_open.svg) center right 40px no-repeat;
-    transition: 0.3s;
-}*/
 .block-choice__buttons > div:not(:last-child) {
     margin-bottom: 32px;
 }
