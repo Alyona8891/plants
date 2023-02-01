@@ -16,6 +16,7 @@ const buttons = document.querySelectorAll(".services__button");
 const figures = document.querySelectorAll(".services__project-block");
 const forms = document.querySelectorAll(".form");
 
+
 hamb.addEventListener("click", hambHandler);
 function hambHandler(e) {
     e.preventDefault();
@@ -40,6 +41,9 @@ document.onclick = function (e) {
       popup.classList.remove("open");
       hamb.classList.remove("active");
       body.classList.remove("noscroll");
+      select.classList.remove("contacts__select_active");
+      select.classList.add("contacts__select");
+      
    }
 }
 price.forEach(function (el, i) {
@@ -92,7 +96,143 @@ buttons.forEach(function (el, index) {
            figures.forEach((el) => el.classList.remove("blur"));
        }
        
-       })
-       
-       
+       })  
 })
+
+let arrCity = [{
+    City: 'New York City',
+    Phone: '+1 212 456 0002',
+    ['Office adress']: '9 East 91st Street',
+}, {
+    City: 'Sherrill, NY',
+    Phone: '+1 315 908 0004',
+    ['Office adress']: '14 WEST Noyes BLVD',
+}, {
+    City: 'Yonkers, NY',
+    Phone: '+1 914 678 0003',
+    ['Office adress']: '511 Warburton Ave',
+}, {
+    City: 'Canandaigua, NY',
+    Phone: '+1 585 393 0001',
+    ['Office adress']: '151 Charlotte Street', 
+}
+]
+
+const select = document.querySelector("#city");
+const div = document.querySelector(".card__info-titles");
+const nameSelect = document.querySelector(".contacts__name-select");
+const options = document.querySelectorAll(".contacts__name-option");
+const option = document.querySelector(".contacts__options");
+let card = document.createElement ('div');
+card.className = "contacts__city-card card";
+let cardContainer = document.createElement ('div');
+cardContainer.className = "card__container";
+let cardForm = document.createElement ('form');
+cardForm.action = "#";
+cardForm.className = "card__form";
+let cardBtn = document.createElement ('a');
+cardBtn.className = "card__btn";
+cardBtn.innerHTML = "Call us"
+cardBtn.href = "";
+let cardBlockInfo = document.createElement ('div');
+cardBlockInfo.className = "card__block-info";
+let cardInfoTitles = document.createElement ('div');
+cardInfoTitles.className = "card__info-titles";
+let cardInfoTexts = document.createElement ('div');
+cardInfoTexts.className = "card__info-texts";
+
+const arr = [];
+for (i=0; i<options.length; i++) {
+    arr.push(options[i].innerHTML);
+}
+nameSelect.addEventListener("click", selectHandler);
+function selectHandler(e) {
+    e.stopPropagation();
+          nameSelect.classList.add("contacts__name-select_active");
+          if(select.classList.contains("contacts__select")) {
+            select.classList.remove("contacts__select");
+            select.classList.add("contacts__select_active")
+            card.remove();
+          } else if (select.classList.contains("contacts__select_active")) {
+            select.classList.remove("contacts__select_active");
+            select.classList.add("contacts__select-choise");
+            if(document.querySelector("#name").innerHTML === 'City') {
+                card.remove();} else {select.after(card);}
+          } else if (select.classList.contains("contacts__select-choise")) {
+            select.classList.remove("contacts__select-choise");
+            select.classList.add("contacts__select_active")
+            card.remove();
+          }
+    
+}
+options.forEach((e, index) => e.addEventListener("click", function optionHandler(e) {
+    select.classList.toggle("contacts__select_active");
+    select.classList.toggle("contacts__select-choise");
+    nameSelect.classList.add("contacts__name-select_choise");
+    document.querySelector("#name").innerHTML = arr[index];
+    
+    select.after(card);
+    card.prepend(cardContainer);
+    cardContainer.prepend(cardBlockInfo, cardForm);
+    cardForm.prepend(cardBtn);
+    cardBlockInfo.prepend(cardInfoTitles, cardInfoTexts);  
+    e.stopPropagation();
+    if (cardInfoTitles.children.length < 3) {
+            for(i=0; i<arrCity.length; i++) {
+            const j = arrCity[i];
+            for(let key in j) {
+                if(j[key] === document.querySelector('.contacts__name-select_choise').innerHTML) {
+                     for(let k in j) {
+                    let newDiv = document.createElement ('div');
+                    let newText = document.createElement ('div');
+                    newDiv.innerHTML = `${k}:`;
+                    newText.innerHTML = j[k];
+                    cardInfoTitles.append(newDiv);
+                    cardInfoTexts.append(newText);
+                    let newArr = Object.values(j) 
+                    let p = '';
+                    for(l=0; l<newArr[1].length; l++) {
+                if (+newArr[1][l] >= 0 && newArr[1][l] !== ' ') {
+                        p = p + `${newArr[1][l]}`;
+                    }
+                   
+
+                cardBtn.href = `tel:${p}`;
+                    }
+                     }
+                     
+            }
+            }
+    } 
+} else {
+    let d = document.querySelector('.card__info-texts').children;
+    for(i=0; i<arrCity.length; i++) {
+        const j = arrCity[i];
+        for(let key in j) {
+            
+            if(j[key] === document.querySelector('.contacts__name-select_choise').innerHTML) {
+                let newArr = Object.values(j) 
+
+                    for (k=0; k<newArr.length; k++) {
+                    d[k].innerHTML = newArr[k];
+                    }
+                    let p = '';
+                    for(l=0; l<newArr[1].length; l++) {
+                if (+newArr[1][l] >= 0 && newArr[1][l] !== ' ') {
+                        p = p + `${newArr[1][l]}`;
+                    }
+                    
+
+                cardBtn.href = `tel:${p}`;
+                    }
+                }
+                }
+                
+
+            
+        }
+        }
+
+
+
+}))

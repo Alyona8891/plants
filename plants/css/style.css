@@ -1151,13 +1151,14 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     width: 452px;
     height: 50px;
     margin-top: 148px;
-    padding: 0 34px 0 20px;
     font-size: 20px;
     line-height: 40px;
     letter-spacing: 0.05em;
     color: #717171;
-    appearance: none;
-    background: #D6E7D2 url(../assets/accordion_btnun.svg) center right 35px no-repeat;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+    background: #D6E7D2  url(../assets/accordion_btnun.svg) center right 35px no-repeat;
 }
 @media (max-width: 980px) {
     .contacts__select {
@@ -1177,11 +1178,151 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
         background: #D6E7D2 url(../assets/accordion_btnun.svg) center right 22px no-repeat;
     }
 }
-.contacts__select:active{
-    padding-left: 35px;
+.contacts__select-choise {
     box-shadow: none;
+    border-radius: 0px;
+    width: 452px;
+    height: 50px;
+    margin-top: 148px;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+    overflow: hidden;
+    position: relative;
+    background: #C1E698 url(../assets/accordion_btnun.svg) top 16px right 25px no-repeat;
+}
+.contacts__select_active {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #499A18;
+    margin-top: 148px;
+    width: 442px;
+    height: 284px;
+    box-shadow: none;
+    background: #DCE9D9;
+    position: relative;
+    padding: 0 0px 0 0px;
     transition: 0.3s;
-    background: #C1E698 url(../assets/drop_btn.svg) center right 35px no-repeat;
+    background: #C1E698 url(../assets/accordion_btnprice_open.svg) top 16px right 25px no-repeat;
+}
+.contacts__name-select {
+    font-family: 'Inter';
+    padding: 0 34px 0 20px;
+    width: 100%;
+    height: 53px;
+    border: 1px solid #D6E7D2;
+    font-size: 20px;
+    line-height: 50px;
+    cursor: pointer;
+    color: #717171;
+    letter-spacing: 0.05em;
+    background: #D6E7D2 /*url(../assets/accordion_btnun.svg) center right 35px no-repeat*/;
+}
+.contacts__name-select_active {
+    font-family: 'Inter';
+    width: 100%;
+    height: 53px;
+    border: 1px solid #D6E7D2;
+    font-size: 20px;
+    line-height: 50px;
+    letter-spacing: 0.05em;
+    padding-left: 35px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+}
+.contacts__name-select_choise {
+    font-family: 'Inter';
+    width: 100%;
+    height: 53px;
+    border: 1px solid #D6E7D2;
+    font-size: 16px;
+    line-height: 50px;
+    letter-spacing: 0.05em;
+    padding-left: 35px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0)
+}
+.contacts__options {
+    padding-left: 35px;
+    padding-top: 27px;
+    background-color: #D6E7D2;
+    height: 90%;
+}
+.contacts__name-option:not(:last-child) {
+    margin-bottom: 12px;
+}
+.contacts__name-option {
+    width: 380px;
+    height: 35px;
+    border-bottom: 1px solid #D9D9D9;
+    padding-left: 7px;
+    letter-spacing: 0.07em;
+
+}
+.contacts__name-option:hover {
+    color: #717171;
+    border-bottom: 1px solid #717171;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.contacts__city-card { 
+    width: 448px;
+    height: 214px;
+    background: #EDF2EC;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin-top: 47px;
+    padding: 17px 0px 32px 33px;
+}
+.card__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items:  flex-start;
+}
+.card__btn {
+    display: flex;
+    width: 122px;
+    height: 26px;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    font-family: 'Inika';
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 13px;
+    align-items:  center;
+    color: #717171;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 127px;
+}
+.card__block-info {
+    display: flex;
+    margin-bottom: 24px;
+}
+.card__info-titles {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin-right: 18px;
+}
+.card__info-texts {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    min-width: 190px;
+    letter-spacing: 0.05em;
+    color: #717171;
 }
 /*----------------footer-----------------*/
 .footer {
