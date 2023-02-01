@@ -934,11 +934,12 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     color:#E06733;
     font-weight: 700;
 }
-.block-choice__btn-form {
+/*.block-choice__btn-form {
     margin-bottom: 12px;
-}
+}*/
 .block-choice__btn {
-    display: block;
+    margin-bottom: 12px;
+    display: flex;
     width: 86px;
     height: 25px;
     background: #FFFFFF;
@@ -947,6 +948,8 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     font-size: 14px;
     margin-left: -1px;
     color: #717171;
+    align-items: center;
+    justify-content: center;
 }
 .prices__help-block {
     text-align: right;
@@ -1220,7 +1223,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     cursor: pointer;
     color: #717171;
     letter-spacing: 0.05em;
-    background: #D6E7D2 /*url(../assets/accordion_btnun.svg) center right 35px no-repeat*/;
+    background:  rgba(0, 0, 0, 0) /*url(../assets/accordion_btnun.svg) center right 35px no-repeat*/;
 }
 .contacts__name-select_active {
     font-family: 'Inter';

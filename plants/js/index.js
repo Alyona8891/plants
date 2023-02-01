@@ -41,13 +41,14 @@ document.onclick = function (e) {
       popup.classList.remove("open");
       hamb.classList.remove("active");
       body.classList.remove("noscroll");
-      select.classList.remove("contacts__select_active");
-      select.classList.add("contacts__select");
+     
       
    }
 }
 price.forEach(function (el, i) {
-   el.addEventListener("click", function () {
+   el.addEventListener("click", function (e) {
+
+   
        price.forEach ((el, index) => (index !== i) ? el.classList.remove("block-choice__button_open") : '');
        el.classList.toggle("block-choice__button_open");
        line.forEach((el, i) => (price[i].classList.contains("block-choice__button_open")) ? el.classList.add("block-choice__line_open") : el.classList.remove("block-choice__line_open"));
