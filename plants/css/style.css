@@ -1050,7 +1050,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 .block-help__image {
     margin-right: -9px;
-    margin-bottom: 120px;
+    margin-bottom: 109px;
 }
 @media (max-width: 380px) {
     .block-help__image {
@@ -1193,7 +1193,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     color: #717171;
     overflow: hidden;
     position: relative;
-    background: #C1E698 url(../assets/accordion_btnun.svg) top 16px right 25px no-repeat;
+    background: #C1E698 url(../assets/accordion_btnun.svg) top 16px right 35px no-repeat;
 }
 .contacts__select_active {
     font-family: 'Inter';
@@ -1203,14 +1203,14 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     letter-spacing: 0.05em;
     color: #499A18;
     margin-top: 148px;
-    width: 442px;
+    width: 452px;
     height: 284px;
     box-shadow: none;
     background: #DCE9D9;
     position: relative;
     padding: 0 0px 0 0px;
     transition: 0.3s;
-    background: #C1E698 url(../assets/accordion_btnprice_open.svg) top 16px right 25px no-repeat;
+    background: #C1E698 url(../assets/accordion_btnprice_open.svg) top 16px right 35px no-repeat;
 }
 .contacts__name-select {
     font-family: 'Inter';
@@ -1233,7 +1233,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     font-size: 20px;
     line-height: 50px;
     letter-spacing: 0.05em;
-    padding-left: 35px;
+    padding-left: 20px;
     cursor: pointer;
     background: rgba(0, 0, 0, 0);
 }
@@ -1245,15 +1245,15 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     font-size: 16px;
     line-height: 50px;
     letter-spacing: 0.05em;
-    padding-left: 35px;
+    padding-left: 20px;
     cursor: pointer;
     background: rgba(0, 0, 0, 0)
 }
 .contacts__options {
-    padding-left: 35px;
+    padding-left: 20px;
     padding-top: 27px;
     background-color: #D6E7D2;
-    height: 90%;
+    height: 81%;
 }
 .contacts__name-option:not(:last-child) {
     margin-bottom: 12px;
@@ -1279,7 +1279,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
     border: 1px solid #000000;
     border-radius: 20px;
     margin-top: 47px;
-    padding: 17px 0px 32px 33px;
+    padding: 17px 0px 32px 37px;
 }
 .card__container {
     display: flex;
@@ -1305,7 +1305,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 }
 .card__block-info {
     display: flex;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 .card__info-titles {
     font-family: 'Inter';
