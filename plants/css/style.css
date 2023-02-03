@@ -1183,7 +1183,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 @media (max-width: 1300px) {
     .contacts__select {
         margin-top: 100px;
-        margin-bottom: 249px;
+        margin-bottom: 239px;
         letter-spacing: 2px;
         order: 2;
         transition: none;
@@ -1216,7 +1216,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 @media (max-width: 1300px) {
     .contacts__select-choise{
         margin-top: 63px;
-
+        margin-bottom: 239px;
     }
 }
 @media (max-width: 520px) {
