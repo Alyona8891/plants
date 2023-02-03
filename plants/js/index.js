@@ -180,7 +180,7 @@ options.forEach((e, index) => e.addEventListener('click', function optionHandler
                             if (+newArr[1][l] >= 0 && newArr[1][l] !== ' ') {
                                 p = p + `${newArr[1][l]}`;
                             }
-                            cardBtn.href = `tel:${p}`;
+                            cardBtn.href = `tel:+${p}`;
                         }
                     } 
                 }
