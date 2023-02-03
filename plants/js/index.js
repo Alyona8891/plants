@@ -16,7 +16,6 @@ const buttons = document.querySelectorAll(".services__button");
 const figures = document.querySelectorAll(".services__project-block");
 const forms = document.querySelectorAll(".form");
 
-
 hamb.addEventListener("click", hambHandler);
 function hambHandler(e) {
     e.preventDefault();
@@ -25,7 +24,6 @@ function hambHandler(e) {
     hamb.classList.toggle("active");
     body.classList.toggle("noscroll");
     renderPopup();
-    
  }
  function renderPopup() {
     popup.appendChild(menu);
@@ -40,15 +38,11 @@ document.onclick = function (e) {
    if (e.className != 'active') {
       popup.classList.remove("open");
       hamb.classList.remove("active");
-      body.classList.remove("noscroll");
-     
-      
+      body.classList.remove("noscroll"); 
    }
 }
 price.forEach(function (el, i) {
    el.addEventListener("click", function (e) {
-
-   
        price.forEach ((el, index) => (index !== i) ? el.classList.remove("block-choice__button_open") : '');
        el.classList.toggle("block-choice__button_open");
        line.forEach((el, i) => (price[i].classList.contains("block-choice__button_open")) ? el.classList.add("block-choice__line_open") : el.classList.remove("block-choice__line_open"));
@@ -66,7 +60,6 @@ forms.forEach(function (el) {
    })
 })
 buttons.forEach(function (el, index) {
-   
    el.addEventListener("click", function () {
        let num = 1;
        for(i=0; i<3; i++) {
@@ -77,12 +70,10 @@ buttons.forEach(function (el, index) {
        if(el.classList.contains("button__active")) {
            el.classList.remove("button__active");   
        } else {
-           
-           
-           if(num < 3) {
-               el.classList.add("button__active");
-           }
-           figures.forEach((el) => el.classList.add("blur"));
+        if(num < 3) {
+            el.classList.add("button__active");
+        }
+        figures.forEach((el) => el.classList.add("blur"));
        }
        if (gardenBtn.classList.contains("button__active")) {
            garden.forEach((el) => el.classList.remove("blur"));
@@ -96,8 +87,7 @@ buttons.forEach(function (el, index) {
        if (!gardenBtn.classList.contains("button__active") && !plantingBtn.classList.contains("button__active") && !lawnBtn.classList.contains("button__active")) {
            figures.forEach((el) => el.classList.remove("blur"));
        }
-       
-       })  
+    })  
 })
 
 let arrCity = [{
@@ -128,9 +118,6 @@ let card = document.createElement ('div');
 card.className = "contacts__city-card card";
 let cardContainer = document.createElement ('div');
 cardContainer.className = "card__container";
-let cardForm = document.createElement ('form');
-cardForm.action = "#";
-cardForm.className = "card__form";
 let cardBtn = document.createElement ('a');
 cardBtn.className = "card__btn";
 cardBtn.innerHTML = "Call us"
@@ -171,11 +158,9 @@ options.forEach((e, index) => e.addEventListener("click", function optionHandler
     select.classList.toggle("contacts__select-choise");
     nameSelect.classList.add("contacts__name-select_choise");
     document.querySelector("#name").innerHTML = arr[index];
-    
     select.after(card);
     card.prepend(cardContainer);
-    cardContainer.prepend(cardBlockInfo, cardForm);
-    cardForm.prepend(cardBtn);
+    cardContainer.prepend(cardBlockInfo, cardBtn);
     cardBlockInfo.prepend(cardInfoTitles, cardInfoTexts);  
     e.stopPropagation();
     if (cardInfoTitles.children.length < 3) {
@@ -196,12 +181,9 @@ options.forEach((e, index) => e.addEventListener("click", function optionHandler
                 if (+newArr[1][l] >= 0 && newArr[1][l] !== ' ') {
                         p = p + `${newArr[1][l]}`;
                     }
-                   
-
                 cardBtn.href = `tel:${p}`;
                     }
-                     }
-                     
+                } 
             }
             }
     } 
@@ -210,30 +192,30 @@ options.forEach((e, index) => e.addEventListener("click", function optionHandler
     for(i=0; i<arrCity.length; i++) {
         const j = arrCity[i];
         for(let key in j) {
-            
             if(j[key] === document.querySelector('.contacts__name-select_choise').innerHTML) {
-                let newArr = Object.values(j) 
-
-                    for (k=0; k<newArr.length; k++) {
+                let newArr = Object.values(j)
+                for (k=0; k<newArr.length; k++) {
                     d[k].innerHTML = newArr[k];
-                    }
-                    let p = '';
-                    for(l=0; l<newArr[1].length; l++) {
+                }
+                let p = '';
+                for(l=0; l<newArr[1].length; l++) {
                 if (+newArr[1][l] >= 0 && newArr[1][l] !== ' ') {
-                        p = p + `${newArr[1][l]}`;
-                    }
-                    
-
+                    p = p + `${newArr[1][l]}`;
+                }
                 cardBtn.href = `tel:${p}`;
-                    }
-                }
-                }
-                
-
-            
+            }
         }
-        }
-
-
-
-}))
+    }
+}
+}
+if (window.innerWidth < 400) {
+    let parent = document.querySelector('.contacts__container');
+    let child = document.querySelector('.contacts__image ');
+    if(parent.contains(child) ) {
+        let image = document.querySelector('.contacts__image');
+        image.className = 'mobile';
+    }
+}
+}
+)
+)
