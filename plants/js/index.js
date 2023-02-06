@@ -191,7 +191,7 @@ options.forEach((e, index) => e.addEventListener('click', function optionHandler
         for(i=0; i<arrCity.length; i++) {
             const j = arrCity[i];
             for(let key in j) {
-                if(j[key] === document.querySelector('.    contacts__name-select_choise').innerHTML) {
+                if(j[key] === document.querySelector('.contacts__name-select_choise').innerHTML) {
                     let newArr = Object.values(j)
                     for (k=0; k<newArr.length; k++) {
                         d[k].innerHTML = newArr[k];
